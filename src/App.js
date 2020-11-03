@@ -39,6 +39,9 @@ const App = () => {
      */
     setPosts(posts.map(post => {
       if (post.id === postId){
+        // const removeListener = document.querySelector(".like-section-wrapper svg");
+        // console.log(removeListener);
+        // removeListener.removeEventListener('onClick', likePost);
         return { ...post, likes: post.likes + 1 }
       }
       return post
