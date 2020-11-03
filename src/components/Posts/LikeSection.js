@@ -11,7 +11,8 @@ const LikeSection = props => {
   const { likePost, numberOfLikes } = props;
   const [listener, setListener] = useState(true);
   const toggleLike = () => {
-    setListener(!listener);
+    if (listener === true) 
+    setListener(false);
   };
   console.log(listener);
   return (
