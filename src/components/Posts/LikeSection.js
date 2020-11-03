@@ -9,6 +9,7 @@ import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
+
   const [listener, setListener] = useState(true);
   const toggleLike = () => {
     if (listener === true) 
@@ -23,8 +24,12 @@ const LikeSection = props => {
       >
         {/* <div className='like-section-wrapper' onClick={() => likePost()}> */}
         <div className='like-section-wrapper' 
+          // onClick={() => {
+          //   listener ? likePost() : alert("You've already liked this post!")
+          //   toggleLike()
+          // }} 
           onClick={() => {
-            listener ? likePost() : alert("no")
+            if (listener){ likePost() }
             toggleLike()
           }} 
         >
